@@ -1,0 +1,223 @@
+## 命名规则 
+     xxx源码修改记录
+	 
+## 版本号
+程序版本号为V2.0.XX1.XXX2.XXXXXX3.X4。
+说明：1、XX为工程编号，例如14号线为14，4号线为04；
+      2、XXX为模块编号，详见模块编号对应表；
+      3、XXXXXX为模块修改时间，yymmdd;
+      4、X为本月模块修改次数；
+      5、2.0为MAS平台的版本号。
+	  
+##  正文
+当前版本号：V2.0………………，上一版本号：V2.0…………；修改人：XXX，修改日期：yymmdd；
+1、源码修改描述，修改了XX文件，XX函数，实现了XX功能；
+2、源码修改描述，修改了XX文件，XX函数，实现了XX功能；
+
+## 说明：
+
+ 该文件和相应源码放至同一目录下，模块负责人更新源码时须同时更新该文件。
+
+
+
+| 序号  | 一级目录     | 模块                  | 模块编号 |
+| ----- | ------------ | --------------------- | -------- |
+| 1     | cert         |                       | 0101     |
+| 2     | createqm     |                       | 0201     |
+| 3     | dbscripts    |                       | 0301     |
+| ----- | ------------ | --------------------- | -------- |
+| 4     | dfdb         | daycal                | 0401     |
+| 5     |              | dbclean               | 0402     |
+| 6     |              | dbcorrect             | 0403     |
+| 7     |              | dbhissrv              | 0404     |
+| 8     |              | dbhistable            | 0405     |
+| 9     |              | dbhoursta             | 0406     |
+| 10    |              | dbsrv                 | 0407     |
+| 11    |              | passconv              | 0408     |
+| 12    |              | winexdb               | 0409     |
+| ----- | ------------ | --------------------- | -------- |
+| 13    | dorbase      | dorbase               | 0501     |
+| 14    |              | lrsql                 | 0502     |
+| 15    |              | rdbapp                | 0503     |
+| 16    |              | rdbbackup             | 0504     |
+| 17    |              | rdbdataserv           | 0505     |
+| 18    |              | rdbspcherk            | 0506     |
+| 19    |              | rsql                  | 0507     |
+| ----- | ------------ | --------------------- | -------- |
+| 20    | extensions   | alarmexsrv            | 0601     |
+| 21    |              | alarmstat             | 0602     |
+| 22    |              | comping               | 0603     |
+| 23    |              | dms                   | 0604     |
+| 24    |              | FileEncryptTool       | 0605     |
+| 25    |              | hdbimp                | 0606     |
+| 26    |              | nms                   | 0607     |
+| 27    |              | notepad               | 0608     |
+| 28    |              | prot                  | 0609     |
+| 29    |              | rdbsync               | 0610     |
+| 30    |              | syncs                 | 0611     |
+| 31    |              | tms                   | 0612     |
+| 32    |              | tools                 | 0613     |
+| ----- | ------------ | --------------------- | -------- |
+| 33    | fert         | coma                  | 0701     |
+| 34    |              | comc                  | 0702     |
+| 35    |              | comr                  | 0703     |
+| 36    |              | coms                  | 0704     |
+| 37    |              | libcomr_di            | 0705     |
+| 38    |              | libcomview            | 0706     |
+| 39    |              | libgprsbase           | 0707     |
+| 40    |              | libinterface          | 0708     |
+| 41    |              | libprotobase          | 0709     |
+| 42    |              | ntgprs                | 0710     |
+| 43    |              | ntprotocol            | 0711     |
+| 44    |              | shmfert               | 0712     |
+| ----- | ------------ | --------------------- | -------- |
+| 45    | include      | commfunc              | 0801     |
+| 46    |              | display               | 0802     |
+| 47    |              | interface             | 0803     |
+| 48    |              | plat                  | 0804     |
+| 49    |              | qwt_inc               | 0805     |
+| ----- | ------------ | --------------------- | -------- |
+| 50    | lgen         | gethostid             | 0901     |
+| 51    |              | lgen                  | 0902     |
+| 52    |              | license               | 0903     |
+| ----- | ------------ | --------------------- | -------- |
+| 53    | network      | almsrv                | 1001     |
+| 54    |              | datsrv                | 1002     |
+| 55    |              | dfcfg                 | 1003     |
+| 56    |              | evt_save              | 1004     |
+| 57    |              | historymodel          | 1005     |
+| 58    |              | langtrans             | 1006     |
+| 59    |              | pcdev                 | 1007     |
+| 60    |              | pcnet                 | 1008     |
+| 61    |              | srv_gram              | 1009     |
+| 62    |              | srv_rtdb              | 1010     |
+| 63    |              | sys4vb                | 1011     |
+| 64    |              | sysmon                | 1012     |
+| 65    |              | syssrv                | 1013     |
+| 66    |              | testevent             | 1014     |
+| 67    | plat         |                       | 1101     |
+| 68    | reportqt     | report                | 1201     |
+| 69    | scada        | compcc                | 1301     |
+| 70    |              | dispdata              | 1302     |
+| 71    |              | loopproc              | 1303     |
+| 72    |              | onceproc              | 1304     |
+| 73    |              | scada                 | 1305     |
+| 74    |              | SCADA_Server          | 1306     |
+| 75    |              | scadacal              | 1307     |
+| 76    |              | scadadpc              | 1308     |
+| 77    |              | scadalog              | 1309     |
+| 78    |              | scadamap              | 1310     |
+| 79    |              | scadapc               | 1311     |
+| 80    |              | scadapdr              | 1312     |
+| 81    |              | scadasave             | 1313     |
+| 82    |              | scd_cli               | 1314     |
+| 83    |              | scd_dll               | 1315     |
+| 84    |              | scd_ld                | 1316     |
+| 85    |              | testent               | 1317     |
+| ----- | ------------ | --------------------- | -------- |
+| 86    | smmi         | eventviewui           | 1401     |
+| 87    |              | scadaui               | 1402     |
+| 88    |              | uiappif               | 1403     |
+| 89    |              | alm                   | 1404     |
+| 90    |              | bastimectrl           | 1405     |
+| 91    |              | checkctrl             | 1406     |
+| 92    |              | colorpaleet           | 1407     |
+| 93    |              | ctable                | 1408     |
+| 94    |              | curveview             | 1409     |
+| 95    |              | datamaintain          | 1410     |
+| 96    |              | deliverctrl           | 1411     |
+| 97    |              | dispatchctrl          | 1412     |
+| 98    |              | dxflib                | 1413     |
+| 99    |              | faultrecur            | 1414     |
+| 100   |              | gzpplugin             | 1415     |
+| 101   |              | ialarm                | 1416     |
+| 102   |              | lanauage_tr           | 1417     |
+| 103   |              | notepaddll            | 1418     |
+| 104   |              | pointmanage           | 1419     |
+| 105   |              | protui                | 1420     |
+| 106   |              | querypara             | 1421     |
+| 107   |              | qwt_df                | 1422     |
+| 108   |              | sequencectrl          | 1423     |
+| 109   |              | serialctrl            | 1424     |
+| 110   |              | snapshotctrl          | 1425     |
+| 111   |              | snowslip              | 1426     |
+| 112   |              | splash                | 1427     |
+| 113   |              | switchcmc             | 1428     |
+| 114   |              | trendcurve            | 1429     |
+| 115   |              | wslib                 | 1430     |
+| 116   |              | xlxzplugin            | 1431     |
+| 117   |              | xmlcim                | 1432     |
+| 118   |              | automapping           | 1433     |
+| 119   |              | connect               | 1434     |
+| 120   |              | dbf_dev               | 1435     |
+| 121   |              | expression            | 1436     |
+| 122   |              | formulaparser         | 1437     |
+| 123   |              | free_type2            | 1438     |
+| 124   |              | freetype2             | 1439     |
+| 125   |              | graphconfig           | 1440     |
+| 126   |              | grapmark              | 1441     |
+| 127   |              | graphoper             | 1442     |
+| 128   |              | overvandmag           | 1443     |
+| 129   |              | painter_db            | 1444     |
+| 130   |              | qtpainter             | 1445     |
+| 131   |              | qtxpaint              | 1446     |
+| 132   |              | sdnrule               | 1447     |
+| 133   |              | uigraphif             | 1448     |
+| 134   |              | xpaintoper            | 1449     |
+| 135   |              | basquery              | 1450     |
+| 136   |              | initmmi               | 1451     |
+| 137   |              | qtmmi                 | 1452     |
+| 138   |              | uienvinit             | 1453     |
+| 139   |              | aormgr                | 1454     |
+| 140   |              | createid              | 1455     |
+| 141   |              | dataview              | 1456     |
+| 142   |              | dbui                  | 1457     |
+| 143   |              | evtstat               | 1458     |
+| 144   |              | funceditor            | 1459     |
+| 145   |              | ievent                | 1460     |
+| 146   |              | ipcc                  | 1461     |
+| 147   |              | ldedit                | 1462     |
+| 148   |              | qxmleditor            | 1463     |
+| 149   |              | rtdbui                | 1464     |
+| 150   |              | safeSrv               | 1465     |
+| 151   |              | sysmgr                | 1466     |
+| 152   |              | trendgroup            | 1467     |
+| 153   |              | cdadbf                | 1468     |
+| 154   |              | commfunc              | 1469     |
+| 155   |              | dbcomm                | 1470     |
+| 156   |              | plat                  | 1471     |
+| 157   |              | qtsingleapplication   | 1472     |
+| 158   |              | rightManage           | 1473     |
+| ----- | ------------ | --------------------- | -------- |
+| 159   | sup          | acsdata               | 1501     |
+| 160   |              | Asset                 | 1502     |
+| 161   |              | loadtime              | 1503     |
+| 162   |              | modedesc              | 1504     |
+| 163   |              | modeexec              | 1505     |
+| 164   |              | modegroup             | 1506     |
+| 165   |              | modeswitch            | 1507     |
+| 166   |              | CCTV                  | 1508     |
+| 167   |              | ld_edit               | 1509     |
+| 168   |              | ld_exec               | 1510     |
+| 169   |              | mycctv                | 1511     |
+| 170   |              | mypa                  | 1512     |
+| 171   |              | mypis                 | 1513     |
+| 172   |              | pa                    | 1514     |
+| 173   |              | pis                   | 1515     |
+| 174   |              | watchdata             | 1516     |
+| ----- | ------------ | --------------------- | -------- |
+| 175   | swapsrv      | procspy               | 1601     |
+| 176   |              | swapdisp              | 1602     |
+| 177   |              | swaplink              | 1603     |
+| 178   |              | swapsrv               | 1604     |
+| ----- | ------------ | --------------------- | -------- |
+| 179   | tools        | backup                | 1701     |
+| 180   |              | dbspy                 | 1702     |
+| 181   |              | dfwave                | 1703     |
+| 182   |              | language              | 1704     |
+| 183   |              | modelmgr              | 1705     |
+| 184   |              | syslog                | 1706     |
+| 185   |              | vproc                 | 1707     |
+| 186   |              | wftp                  | 1708     |
+| ----- | ------------ | --------------------- | -------- |
+| 187   | topo         |                       | 1801     |

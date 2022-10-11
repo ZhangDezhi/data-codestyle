@@ -1,0 +1,28 @@
+type:
+
+
+#......:::::::: Format ::::::::.....
+# :emoji: Subject
+#
+# Commit body...
+
+
+type:(用于说明commit的类别, 只允许7个标识符.)
+- feat: 新功能(feature)
+- fix: 修补bug
+- docs: 文档(documentation)
+- style: 格式(不影响代码运行的变动)
+- refactor: 重构(既不是添加新功能,也不是修改bug)
+- test: 增加测试
+- chore: 构建过程或辅助工具的变动.
+
+scop
+用于说明 commit影响的范围, 比如数据层, 控制层, 视图层等等.
+
+subject
+用简短描述, 不超过50个字符.
+
+注意:
+- 以动词开头, 使用第一人称时, 比如change ,而不是 changed 或者changes
+- 第一个字母小写
+- 结尾不加句号

@@ -1,0 +1,38 @@
+#!/bin/bash
+#------------------------------------------
+# v1.0
+# Create by  :ZhangDezhi
+# Create Time:2022-04-06 08:28
+# Last Modified  : 2022-04-06 08:30:10
+# 在当前目录连接clangFormat文件.
+# 
+#------------------------------------------
+if [[ $1 == "gcc" ]]; then
+	rm .clang-format
+	ln -s $HOME/.clangformat/clang-format_gcc .clang-format
+elif  [[ $1 == "llvm" ]]; then
+
+	rm .clang-format
+	ln -s $HOME/.clangformat/clang-format_llvm .clang-format
+elif [[ $1 == "google" ]]; then
+
+	rm .clang-format
+	ln -s $HOME/.clangformat/clang-format_google .clang-format
+elif [[ $1 == "webkit" ]]; then
+
+	rm .clang-format
+	ln -s $HOME/.clangformat/clang-format_webkit .clang-format
+elif [[ $1 == "mozilla" ]]; then
+	rm .clang-format
+	ln -s $HOME/.clangformat/clang-format_mozilla .clang-format
+elif [[ $1 == "vs" ]]; then
+	rm .clang-format
+	ln -s $HOME/.clangformat/clang-format_vs .clang-format
+elif [[ $1 == "qt" ]]; then
+	rm .clang-format
+	ln -s $HOME/.clangformat/clang-format_qt .clang-format
+else
+	rm .clang-format
+	ln -s $HOME/.clangformat/clang-format .clang-format
+
+fi

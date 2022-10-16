@@ -4,7 +4,8 @@
 # Last Modified  : 2022-04-06 09:10:13
 # Name:symlink-vim.sh
 # Version: v1.0
-# Description: vim开光脚???
+# Description: 代码格式化初始化
+
 
 
 if [[ $(uname) == 'Linux' ]]; then

@@ -5,34 +5,122 @@
 # Create Time:2022-04-06 08:28
 # Last Modified  : 2022-04-06 08:30:10
 # 在当前目录连接clangFormat文件.
-# 
+#
 #------------------------------------------
-if [[ $1 == "gcc" ]]; then
+
+function1()
+{
+	echo "gcc code-style"
 	rm .clang-format
 	ln -s $HOME/.clangformat/clang-format_gcc .clang-format
-elif  [[ $1 == "llvm" ]]; then
+}
 
+function2()
+{
+	echo "llvm code-style"
 	rm .clang-format
 	ln -s $HOME/.clangformat/clang-format_llvm .clang-format
-elif [[ $1 == "google" ]]; then
+}
 
+function3()
+{
+	echo "google code-style"
 	rm .clang-format
 	ln -s $HOME/.clangformat/clang-format_google .clang-format
-elif [[ $1 == "webkit" ]]; then
+}
 
+function4()
+{
+	echo "webkit code-style"
 	rm .clang-format
 	ln -s $HOME/.clangformat/clang-format_webkit .clang-format
-elif [[ $1 == "mozilla" ]]; then
+}
+
+function5()
+{
+	echo "mozilla code-style"
 	rm .clang-format
 	ln -s $HOME/.clangformat/clang-format_mozilla .clang-format
-elif [[ $1 == "vs" ]]; then
+}
+
+function6()
+{
+	echo "mas code-style"
 	rm .clang-format
 	ln -s $HOME/.clangformat/clang-format_vs .clang-format
-elif [[ $1 == "qt" ]]; then
+}
+
+function7()
+{
+	echo "qt code-style"
 	rm .clang-format
 	ln -s $HOME/.clangformat/clang-format_qt .clang-format
-else
+}
+
+function8()
+{
+	echo "default code-style"
 	rm .clang-format
 	ln -s $HOME/.clangformat/clang-format .clang-format
+}
 
-fi
+menu(){
+cat << eof
+ *********************************************
+*                MENU                         *
+*   1.gcc                  2.llvm             *
+*   3.google               4.webkit           *
+*   5.mozilla              6.mas              *
+*   7.qt                   8.default          *
+*               0.exit                        *
+ *********************************************
+eof
+}
+
+usage()
+{
+    read -p "please input your choice: " choice
+    case $choice in
+        1)
+            function1
+            ;;
+        2)
+            function2
+            ;;
+        3)
+            function3
+            ;;
+        4)
+            function4
+            ;;
+        5)
+            function5
+            ;;
+        6)
+            function6
+            ;;
+        7)
+            function7
+            ;;
+        8)
+            function8
+            ;;
+        0)
+            exit 0
+            ;;
+
+    esac
+}
+
+main()
+{
+	while true
+    do
+        menu
+        usage
+		read -p "congtinu.. " choice
+		clear
+    done
+}
+
+main

@@ -1,7 +1,7 @@
 #!/bin/bash
 #!Author:ZhangDezhi
 # Create Time:2021-04-24 20:08
-# Last Modified  : 2022-04-06 09:10:13
+# Last Modified  : 2022-10-24 08:53:09
 # Name:symlink-vim.sh
 # Version: v1.0
 # Description: 代码格式化初始化
@@ -25,7 +25,7 @@ fi
 echo "start init zsh ... "
 
 rm $HOME/.clangformat
-ln -s $SCRIPT_DIR $HOME/.clangformat
+ln -s $SCRIPT_DIR/clangformat $HOME/.clangformat
 
 #rm $HOME/_clangformat
 #ln -s $SCRIPT_DIR/clangformat $HOME/_clangformat

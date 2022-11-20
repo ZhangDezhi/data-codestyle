@@ -1,8 +1,8 @@
 ---
-Language:        Cpp   # 语言: None, Cpp, Java, JavaScript, ObjC, Proto, TableGen, TextProto
+Language:        Cpp
 BasedOnStyle:  LLVM
 
-AccessModifierOffset: -2
+AccessModifierOffset: -2   #访问修饰符偏移量
 AlignAfterOpenBracket: Align
 AlignConsecutiveAssignments: true   # 连续赋值语句=号对齐
 AlignConsecutiveDeclarations: false # 连续声明语句对齐
@@ -27,40 +27,43 @@ AlwaysBreakTemplateDeclarations: MultiLine # 总是在template声明后换行
 BinPackArguments: true                     # false表示函数实参要么都在同一行，要么都各自一行
 BinPackParameters: true                    # false表示所有形参要么都在同一行，要么都各自一行
 
-# 大括号换行
-BraceWrapping           :
-  AfterClass            : false   # class
-  AfterControlStatement : false   # 控制语句
-  AfterEnum             : false   # enum
-  AfterFunction         : false   # 函数后
-  AfterNamespace        : false   # 命名空间
-  AfterObjCDeclaration  : false
-  AfterStruct           : false
-  AfterUnion            : false
-  AfterExternBlock      : false
-  BeforeCatch           : true
-  BeforeElse            : true
-  IndentBraces          : false
-  SplitEmptyFunction    : false
-  SplitEmptyRecord      : true
-  SplitEmptyNamespace   : true
-
-  # 在二元运算符前换行: None(在操作符后换行), NonAssignment(在非赋值的操作符前换行), All(在操作符前换行)
-BreakBeforeBinaryOperators: None
-
+# 大括号换行  (只有在 BreakBeforeBraces = Custom 有效)
 # 在大括号前换行: Attach(始终将大括号附加到周围的上下文), Linux(除函数、命名空间和类定义，与Attach类似), 
 #   Mozilla(除枚举、函数、记录定义，与Attach类似), Stroustrup(除函数定义、catch、else，与Attach类似), 
 #   Allman(总是在大括号前换行), GNU(总是在大括号前换行，并对于控制语句的大括号增加额外的缩进), WebKit(在函数前换行), Custom
 #   注：这里认为语句块也属于函数
-BreakBeforeBraces: Custom #设置大括号  #Attach
+BreakBeforeBraces: Custom #设置大括号换行  #Attach  设置为Custom生效
+BraceWrapping           :
+  AfterClass            : true  # class
+  AfterControlStatement : true  # 控制语句
+  AfterEnum             : true  # enum
+  AfterFunction         : false   # 函数后
+  AfterNamespace        : false  # 命名空间定义后面
+  AfterObjCDeclaration  : true  # ObjC定义后面
+  AfterStruct           : true  # struct定义后面
+  AfterUnion            : true  # union定义后面
+  AfterExternBlock      : true  #
+  BeforeCatch           : true   # catch之前
+  BeforeElse            : true   # else之前
+  IndentBraces          : false  # 缩进大括号
+
+BreakBeforeTernaryOperators: true  # 在三元运算符前换行
+
+BreakConstructorInitializersBeforeComma: false  # 在构造函数的初始化列表的逗号前换行
+BreakConstructorInitializers: BeforeColon
+
+# 在二元运算符前换行: None(在操作符后换行), NonAssignment(在非赋值的操作符前换行), All(在操作符前换行)
+BreakBeforeBinaryOperators: None
+
+
 BreakBeforeInheritanceComma: false
 BreakInheritanceList: BeforeColon
-BreakBeforeTernaryOperators: true
-BreakConstructorInitializersBeforeComma: false
-BreakConstructorInitializers: BeforeColon
+
 BreakAfterJavaFieldAnnotations: false
+
+
 BreakStringLiterals: true
-ColumnLimit:     100   #字符个数限制
+ColumnLimit:     0   #字符个数限制,0表示没有限制
 CommentPragmas:  '^ IWYU pragma:'
 CompactNamespaces: true
 ConstructorInitializerAllOnOneLineOrOnePerLine: true
@@ -86,18 +89,18 @@ IncludeCategories:
 IncludeIsMainRegex: '(Test)?$'
 IndentCaseLabels: true
 IndentPPDirectives: None
-IndentWidth:     4                            #缩进宽度
+IndentWidth:     4 #缩进宽度
 IndentWrappedFunctionNames: false
 JavaScriptQuotes: Leave
 JavaScriptWrapImports: true
 KeepEmptyLinesAtTheStartOfBlocks: true
 MacroBlockBegin: ''
 MacroBlockEnd:   ''
-MaxEmptyLinesToKeep: 1  #连续空行保留行数
+MaxEmptyLinesToKeep: 1
 NamespaceIndentation: None
 ObjCBinPackProtocolList: Auto
-ObjCBlockIndentWidth: 2          ## OC block后面的缩进
-ObjCSpaceAfterProperty: false    # 在 @property 后面添加空格, \@property (readonly) 而不是 \@property(readonly).
+ObjCBlockIndentWidth: 2
+ObjCSpaceAfterProperty: false
 ObjCSpaceBeforeProtocolList: true
 PenaltyBreakAssignment: 2
 PenaltyBreakBeforeFirstCallParameter: 19
@@ -107,9 +110,7 @@ PenaltyBreakString: 1000
 PenaltyBreakTemplateDeclaration: 10
 PenaltyExcessCharacter: 1000000
 PenaltyReturnTypeOnItsOwnLine: 60
-
-PointerAlignment: Left #指针*挨着哪边
-
+PointerAlignment: Left #指针定义的*位置 
 ReflowComments:  true
 SortIncludes:    true
 SortUsingDeclarations: true
@@ -132,7 +133,7 @@ Standard:        Cpp11
 StatementMacros: 
   - Q_UNUSED
   - QT_REQUIRE_VERSION
-TabWidth:        5
+TabWidth:        4
 UseTab:          Never
 ...
 

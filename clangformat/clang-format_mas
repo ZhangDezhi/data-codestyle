@@ -15,7 +15,7 @@ AccessModifierOffset: -4
 
 NamespaceIndentation: All
 FixNamespaceComments: false
-AlignConsecutiveMacros: true  #宏定义值对齐
+#AlignConsecutiveMacros: true  # 宏定义值对齐
 
 
 SpacesInParentheses: false   # 在圆括号的(后和)前添加空格
